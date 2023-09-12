@@ -36,6 +36,11 @@ You should see a result
 
 ### Open the folder `weather_web`
 
+- Create a file with name `.env` in the `weather_web` folder
+- Add a key with name `REACT_APP_WEB_API_URL=`
+- Paste the URL exactly like this (change YOUR_PORT with the port from the web.api)
+  `http://localhost:YOUT_PORT/WeatherForecast`
+
 - Type the following command
 
 ```javascript
