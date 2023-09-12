@@ -6,7 +6,7 @@ export const WeatherGrid: React.FC<{ weatherByDay: WeatherByDay[] }> = ({
   weatherByDay: WeatherByDay[];
 }) => {
   return (
-    <div className="grid grid-cols-7 gap- mt-2">
+    <div className="grid mobile:grid-cols-4 desktop:grid-cols-7 gap- mt-2">
       {!!weatherByDay.length &&
         weatherByDay.map((weatherByDay: WeatherByDay) => {
           const startWeather = weatherByDay.forecasts[0];
