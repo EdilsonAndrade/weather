@@ -51,7 +51,8 @@ public class WeatherForecastController : ControllerBase
                 return HttpHelpers.BadRequest(new { message = "Unable to retrieve forecast from the given address" });
             }
 
-            return HttpHelpers.Success(periodForecasts);
+            var groupedForeCast = ForecastGroup.GroupForecast(periodForecasts);
+            return HttpHelpers.Success(groupedForeCast);
         }
         catch (System.Exception)
         {
