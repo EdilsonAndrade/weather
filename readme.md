@@ -45,7 +45,7 @@ npm i
 or
 
 ```javascript
-yarn;
+yarn start
 ```
 
 ```javascript
