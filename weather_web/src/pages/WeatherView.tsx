@@ -12,15 +12,19 @@ export const WeatherView: React.FC = () => {
   const getWeathers = async () => {
     setError("");
     setWeatherByDay([]);
-    const baseUrl = process.env.REACT_APP_WEB_API_URL;
-    setLoading(true);
-    const response = await fetch(`${baseUrl}?fullAddress=${address}`);
-    const data = (await response.json()) as HttpResponse;
+    try {
+      const baseUrl = process.env.REACT_APP_WEB_API_URL;
+      setLoading(true);
+      const response = await fetch(`${baseUrl}?fullAddress=${address}`);
+      const data = (await response.json()) as HttpResponse;
 
-    if (data.statusCode === 200) {
-      setWeatherByDay(data.body);
-    } else {
-      setError(data.body.message);
+      if (data.statusCode === 200) {
+        setWeatherByDay(data.body);
+      } else {
+        setError(data.body.message);
+      }
+    } catch (error) {
+      setError("Something went wrong. Please try again later.");
     }
     setLoading(false);
   };
