@@ -9,4 +9,6 @@ public interface IPeriodForecast
   public string Icon { get; set; }
   public string ShortForecast { get; set; }
   public string DetailedForecast { get; set; }
+
+  public DateTime StartTime { get; set; }
 }

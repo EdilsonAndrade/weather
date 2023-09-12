@@ -22,5 +22,5 @@ class PeriodForecast : IPeriodForecast
   public required string DetailedForecast { get; set; }
 
   [JsonPropertyName("startTime")]
-  public required string StartTime { get; set; }
+  public required DateTime StartTime { get; set; }
 }
