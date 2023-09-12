@@ -1,4 +1,7 @@
+using System.Text.Json.Serialization;
+
 internal interface IForecastUrl
 {
-  IPointsDTO Property { get; set; }
+  Property Property { get; set; }
 }
+
